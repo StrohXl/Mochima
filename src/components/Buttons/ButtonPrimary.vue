@@ -26,21 +26,30 @@ withDefaults(
 </script>
 <template>
   <template v-if="type == 'contained'">
-    <RouterLink :to="to" :target="target"
-      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large} md:text-lg rounded-full ${color === 'primary' ? primary_contained : gray_contained}`">
+    <RouterLink
+      :to="to"
+      :target="target"
+      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large} md:text-lg rounded-full ${color === 'primary' ? primary_contained : gray_contained}`"
+    >
       <slot />
     </RouterLink>
   </template>
   <template v-if="type == 'outlined'">
-    <RouterLink :to="to"
-      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large}  md:text-lg rounded-full ${color === 'primary' ? primary_outlined : gray_outlined}`">
+    <RouterLink
+      :to="to"
+      :target="target"
+      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large}  md:text-lg rounded-full ${color === 'primary' ? primary_outlined : gray_outlined}`"
+    >
       <slot />
     </RouterLink>
   </template>
   <template v-if="type == 'text'">
-    <RouterLink :to="to" :class="`${classBasic} ${color === 'primary' ? primary_text : gray_text}`">
+    <RouterLink
+      :to="to"
+      :target="target"
+      :class="`${classBasic} ${color === 'primary' ? primary_text : gray_text}`"
+    >
       <slot />
     </RouterLink>
   </template>
 </template>
-s

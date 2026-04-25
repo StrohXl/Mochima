@@ -35,9 +35,14 @@ onMounted(() => {
             </template>
           </nav>
           <div class="block">
-            <ButtonPrimary size="small" to="#" color="primary" type="contained">
+            <a
+              @click="mobileMenuOpen = false"
+              target="_blank"
+              href="https://www.linkedin.com/in/xm-stroh/"
+              class="bg-teal-500 hover:bg-teal-600 text-white py-2 pb-[10px] px-6 rounded-full text-center duration-200 font-medium"
+            >
               Reservar Ahora
-            </ButtonPrimary>
+            </a>
           </div>
           <div class="flex gap-2">
             <a
@@ -66,23 +71,22 @@ onMounted(() => {
           <nav className="flex flex-col p-4">
             <template v-for="item in routes" :key="item.name" key="{item.href}">
               <a
+                @click="mobileMenuOpen = false"
                 :href="item.link"
                 className="text-gray-700 font-medium py-3 border-b border-gray-100 hover:text-teal-600 duration-200"
-                @click=""
               >
                 {{ item.name }}
               </a>
             </template>
             <div class="mt-6">
-              <ButtonPrimary
-                type="contained"
-                size="small"
-                color="primary"
+              <a
+                @click="mobileMenuOpen = false"
                 target="_blank"
-                to="https://www.linkedin.com/in/xm-stroh/"
+                href="https://www.linkedin.com/in/xm-stroh/"
+                class="bg-teal-500 hover:bg-teal-600 text-white py-2 pb-[10px] px-6 rounded-full text-center duration-200 font-medium"
               >
                 Reservar Ahora
-              </ButtonPrimary>
+              </a>
             </div>
           </nav>
         </div>

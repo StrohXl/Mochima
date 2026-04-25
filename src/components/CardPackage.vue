@@ -20,7 +20,7 @@ withDefaults(
 </script>
 
 <template>
-  <div class="bg-white rounded-2xl shadow-lg h-full flex flex-col">
+  <div class="bg-white rounded-2xl shadow-lg h-full flex flex-col overflow-hidden">
     <div class="card-media relative">
       <img :src="image" :alt="title" :class="`w-full h-full object-cover duration-300 `" />
       <div
