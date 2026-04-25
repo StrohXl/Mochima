@@ -47,7 +47,7 @@
               destinos más hermosos del Caribe.
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-6 my-8">
+          <div class="grid md:grid-cols-2 gap-6 my-8">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
                 <v-icon name="io-boat-sharp" scale="1.4" class="rounded-full text-teal-600" />

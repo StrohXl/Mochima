@@ -21,6 +21,7 @@ import { packages } from '@/data/packages/packages'
         <SwiperFather
           :swiper-config="{
             spaceBetween: 20,
+            autoHeight: false,
             pagination: {
               clickable: true,
             },
@@ -37,7 +38,7 @@ import { packages } from '@/data/packages/packages'
             },
           }"
         >
-          <swiper-slide class="pb-12" v-for="(packageItem, index) in packages" :key="index">
+          <swiper-slide v-for="(packageItem, index) in packages" :key="index">
             <CardPackage
               :popularity="packageItem.popularity"
               :title="packageItem.title"
@@ -63,20 +64,28 @@ import { packages } from '@/data/packages/packages'
   background-repeat: repeat;
   background-size: 391px;
 }
-.container-packages .swiper-pagination {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  bottom: 0px !important;
-
-  .swiper-pagination-bullet {
-    height: 8px;
-    width: 8px;
+.container-packages {
+  .swiper-wrapper {
+    padding-bottom: 42px;
   }
-  .swiper-pagination-bullet-active {
-    background: #fff;
-    height: 15px;
-    width: 15px;
+  .swiper-slide {
+    height: auto;
+  }
+  .swiper-pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    bottom: 0px !important;
+
+    .swiper-pagination-bullet {
+      height: 8px;
+      width: 8px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #fff;
+      height: 15px;
+      width: 15px;
+    }
   }
 }
 </style>

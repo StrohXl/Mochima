@@ -20,7 +20,7 @@ withDefaults(
 </script>
 
 <template>
-  <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+  <div class="bg-white rounded-2xl shadow-lg h-full flex flex-col">
     <div class="card-media relative">
       <img :src="image" :alt="title" :class="`w-full h-full object-cover duration-300 `" />
       <div
@@ -30,15 +30,15 @@ withDefaults(
         ✨ Más Popular
       </div>
     </div>
-    <div class="card-body p-6">
+    <div class="card-body p-6 flex-[1] flex flex-col">
       <h4 class="text-gray-800 font-bold text-2xl">{{ title }}</h4>
       <p class="text-lg mt-4 text-gray-700 font-raleway line-clamp-4">{{ description }}</p>
-      <div class="flex gap-2 flex-wrap mt-4 overflow-x-hidden">
+      <div class="flex gap-2 flex-wrap mt-4 mb-6 overflow-x-hidden">
         <template v-for="(icon, index) in icons" :key="index">
           <v-icon :name="icon" scale="1.4" class="rounded-full text-gray-600" />
         </template>
       </div>
-      <div class="mt-6 border-t-1 border-gray-200 pt-4 flex justify-between items-center">
+      <div class="mt-auto border-t-1 border-gray-200 pt-4 flex justify-between items-center">
         <span class="text-2xl font-bold text-teal-600">${{ price.toFixed(2) }}</span>
         <button-primary to="/" color="primary" type="contained" size="small">
           Reservar
