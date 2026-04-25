@@ -56,13 +56,15 @@ onMounted(() => {
             </a>
           </div>
         </div>
-        <button
-          :class="headerActive ? 'text-gray-700' : 'text-white'"
-          @click="mobileMenuOpen = !mobileMenuOpen"
-        >
-          <v-icon v-if="!mobileMenuOpen" name="hi-menu" scale="1.4" />
-          <v-icon v-else name="io-close" scale="1.4" />
-        </button>
+        <div class="lg:hidden">
+          <button
+            :class="headerActive ? 'text-gray-700' : 'text-white'"
+            @click="mobileMenuOpen = !mobileMenuOpen"
+          >
+            <v-icon v-if="!mobileMenuOpen" name="hi-menu" scale="1.4" />
+            <v-icon v-else name="io-close" scale="1.4" />
+          </button>
+        </div>
       </div>
       <template v-if="mobileMenuOpen">
         <div
