@@ -8,7 +8,7 @@ const gray_text = `text-gray-500 hover:text-gray-600 px-0! py-0!`
 const small = `py-2 px-6`
 const medium = `py-4 px-10`
 const large = `py-6 px-12`
-const classBasic = 'outline-none duration-200 font-medium'
+const classBasic = 'outline-none duration-200 font-medium text-center'
 
 withDefaults(
   defineProps<{
@@ -16,26 +16,24 @@ withDefaults(
     size?: 'small' | 'medium' | 'large'
     color: 'primary' | 'gray'
     type: 'outlined' | 'contained' | 'text'
+    target?: string
   }>(),
   {
     size: 'medium',
+    target: '_self',
   },
 )
 </script>
 <template>
   <template v-if="type == 'contained'">
-    <RouterLink
-      :to="to"
-      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large} md:text-lg rounded-full ${color === 'primary' ? primary_contained : gray_contained}`"
-    >
+    <RouterLink :to="to" :target="target"
+      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large} md:text-lg rounded-full ${color === 'primary' ? primary_contained : gray_contained}`">
       <slot />
     </RouterLink>
   </template>
   <template v-if="type == 'outlined'">
-    <RouterLink
-      :to="to"
-      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large}  md:text-lg rounded-full ${color === 'primary' ? primary_outlined : gray_outlined}`"
-    >
+    <RouterLink :to="to"
+      :class="`${classBasic} ${size === 'small' ? small : size === 'medium' ? medium : large}  md:text-lg rounded-full ${color === 'primary' ? primary_outlined : gray_outlined}`">
       <slot />
     </RouterLink>
   </template>

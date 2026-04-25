@@ -21,6 +21,8 @@ import {
   FaMapMarkerAlt,
   FaRegularEnvelope,
   FaPhoneAlt,
+  HiMenu,
+  IoClose
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -45,6 +47,8 @@ addIcons(
   FaMapMarkerAlt,
   FaRegularEnvelope,
   FaPhoneAlt,
+  HiMenu,
+  IoClose
 )
 
 export { OhVueIcon }

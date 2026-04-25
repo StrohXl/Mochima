@@ -1,7 +1,7 @@
 export const networks = [
   {
     name: 'fa-facebook-f',
-    url: 'https://www.linkedin.com/in/xm-stroh/',
+    // url: 'https://www.linkedin.com/in/xm-stroh/',
     color: '#fff',
     scale: 1.2,
   },
