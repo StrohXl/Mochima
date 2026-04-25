@@ -24,7 +24,7 @@ onMounted(() => {
         <h2 :class="`text-3xl font-bold ${headerActive ? 'text-teal-700' : 'text-white'}`">
           <a href="#">🏝️ Mochima</a>
         </h2>
-        <div class="hidden lg:flex gap-12 items-center">
+        <div class="hidden lg:flex gap-6 xl:gap-12 items-center">
           <nav class="flex gap-7 text-lg">
             <template v-for="item in routes" :key="item.name">
               <a
