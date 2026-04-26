@@ -23,6 +23,7 @@ import ButtonPrimary from '@/components/Buttons/ButtonPrimary.vue'
     </div>
     <div style="height: calc(100% + 195px)" class="absolute w-full left-0 -z-1 top-0 bg-gray-700">
       <video
+        fetchpriority="high"
         poster="/capture-mochima.webp"
         src="/olas.mp4"
         class="object-cover w-full h-full opacity-60"
